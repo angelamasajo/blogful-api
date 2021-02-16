@@ -183,7 +183,7 @@ describe('Articles Endpoints', function() {
       it(`responds with 404`, () => {
         const articleId = 123456
         return supertest(app)
-          .delete(`articles/${articleId}`)
+          .delete(`/articles/${articleId}`)
           .expect(404, { error: { message: `Article doesn't exist` } })
       })
     })
